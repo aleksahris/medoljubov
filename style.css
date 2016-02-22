@@ -1,0 +1,78 @@
+
+
+@media (min-width:500px){	body{	margin: 1%; background-color: #009966;
+font-family: arial; 	
+color:#C0C0C0; 
+font-size: 0.5em; /*1em=16px*/	}}
+/*This happens when the width of the window is larger than 500px*/
+
+@media(min-width: 750px){	body{	margin: 1%; background-color: #909090; 	
+ font-family: georgia;		
+color: #CCCC66; 	
+font-size: 1em; /*1em=16px*/}}
+/*This happens when the width of the window is larger than 750px*/
+
+@media(min-width: 1000px){	body {margin: 1%;  
+  color:#A8A8A8; background-color: #B0C4DE;
+  font-size: 1.3em; /*1em=16px*/}}	
+/*This happens when the width of the window is larger than 1000px*/
+
+h1{background-color: #009966; font-weight: bold; text-align: center; color: white; font-size: 30px; height:40px; padding: 0.3%;}
+h2 {color:#000066; font-family: cursive; font-weight: bold; text-decoration: none;}
+h3,p {font-family: arial;
+ font-size: 18px;		
+color: #000066;text-align: center; margin-bottom: 10px;}
+
+.active, a:hover {background-color:#000066; color: #F8F8F8; text-decoration: none; }
+a{color: #009966;font-family: sans-serif;}
+
+
+
+nav a {font-family: sans-serif; color:#000066; 
+    text-align: center;
+    background-color: white;
+    width: 20%;
+    border: 3px solid #009966;
+    height: 50px;
+    line-height: 50px;
+    font-size: 140%;
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 100px;
+    border-radius: 7px;
+  }
+
+.crop-img{
+  max-height:200px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: 3px solid #003399;
+  padding: 3px; 
+
+}
+
+.large-img{
+  width:80%;
+  height: 120%;
+    border-radius: 20px;
+    border: 3px solid #003399;
+    padding: 5px; 
+    margin-left: 120px;
+
+}
+
+.signature {font-family: "Times New Roman"; font-size: 16px; font-style: italic;}
+#forward, #backward{background-color:#009966; width: 40px; height: 30px; margin-left: 10px;}
+
+img{  
+  margin-bottom: 7px;
+  margin-top: 7px;
+  border-radius: 20px;
+    border: 3px solid #003399;
+     padding: 3px;
+    }
+
+
+

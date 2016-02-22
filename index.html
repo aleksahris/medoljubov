@@ -1,0 +1,153 @@
+<html>
+<head> 
+<meta charset = "UTF-8">
+<title>Medo website</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="myjs.js"></script>
+
+<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+
+<link rel ="stylesheet" type="text/css" href="style.css"/>
+
+</head>
+<body>
+<nav>
+<a href="index.html" class = "active">Home</a>
+&nbsp;
+<a href="about.html">About Me</a>
+&nbsp;
+<a href="contact.html">Contact</a>
+</nav>
+    <h1 id="title" onclick="sayPoodle();"> Medo </h1>
+
+
+<h2 class="indent"></h2>
+<h2>Hi! Welcome! My Mom, my Dad and their friends and relatives call me Medo!</h2>
+
+
+<h3>To know my breed, please click on the words "Medo", "Description of Me" and "Contact details" in the headings of each page.
+If you want to see different color of the background on each page, please change the size of the window. Enjoy my slide snow and feel free to click anytime on the small thumbnail images to see me in the BIG picture.</h3>
+
+ 
+	<!--
+		   These are the thumbnail images.
+		   They pretty much the same as the 
+		   last example from the previous
+		   module, except I have added an
+		   id to each image which includes
+		   the number of that image.
+		-->
+		<div class="row">
+			<div class="col-xs-3">
+				<img id="image1" class="crop-img" src="Medo2.png" alt="Bday"/> 
+			</div>
+			<div class="col-xs-3">
+				<img id="image2" class="crop-img" src="Medo12.png" alt="Sit"/> 
+			</div>
+			<div class="col-xs-3">
+				<img id="image3" class="crop-img" src="Medo6.png" alt="Easter"/> 
+			</div>
+			<div class="col-xs-3">
+				<img id="image4" class="crop-img" src="Medo4.png" alt="Vacation"/> 
+			</div>
+		</div>
+		<!--
+			this is the large image which is
+			on a row of its own. 
+			The code is similar to the last example
+			of the previous module, but I have
+			added a backwards and forwards button
+		-->
+		<div class="row">
+			<div class="col-xs-1">
+				<button id="backward">&lt;</button>
+			</div>
+			<div class="col-xs-10">
+				<img id="bigImage" class="large-img" src="Medo2.png" alt="Bday"/> 
+			</div>
+			<div class="col-xs-1">
+				<button id="forward">&gt;</button>
+			</div>
+
+			<script>
+		// whether the slideshow is paused or not
+		var paused = false;
+
+		// when you click on a thumbnail
+		// it sets the src of the big image
+		// to be the same as the image
+		// you clicked on
+		$(".crop-img").click(function(){
+			$("#bigImage").attr('src', 
+				$(this).attr('src'));
+		});
+
+		// the counter variable that keeps
+		// track of which image you are showing
+		var counter = 1;
+		// virtually click on the current
+		// image to load it into the big image
+		$("#image"+counter).click();
+
+		// when you click on the backwards
+		// button select the previous image
+		$("#backward").click(function (){
+			// go back one in the counter
+			counter = counter - 1;
+			// if we are below 1 (the first
+			// image) loop round to 4 (the
+			// last image)
+			if(counter < 1){
+				counter = 4;
+			}
+			// virtually click on the current
+			// image to load it into the big image
+			$("#image"+counter).click();
+		});
+
+		// when you click on the backwards
+		// button select the next image
+		$("#forward").click(function (){
+			// go forward one in the counter
+			counter = counter + 1;
+			// if we are above 4 (the last
+			// image) loop round to 1 (the
+			// first image)
+			if(counter > 4){
+				counter = 1;
+			}
+			// virtually click on the current
+			// image to load it into the big image
+			$("#image"+counter).click();
+		});
+
+		// when you click the big image 
+		// toggle pausing. Set paused to 
+		// not paused, i.e. if it is paused
+		// set it to not paused, if it is 
+		// not paused set it to paused
+		$("#bigImage").click(function (){
+			paused = !paused;
+		});
+
+		// set interval makes it move 
+		// forward every 6 second
+		setInterval(function (){
+			// first check if it is paused
+			if(!paused){
+				// virtual click the forward
+				// button
+				$("#forward").click();
+			};
+		}, 6000);
+		</script>
+		
+		</div>
+	</div>
+<div>
+<p align=center class="signature">© Copyright 2016 Aleksandra Hristova</p>
+</div>
+
+</body>
+</html>
